@@ -231,7 +231,7 @@ azure:
 Add the [`azure-blob`](https://github.com/testdouble/azure-blob) gem to your `Gemfile`:
 
 ```ruby
-gem "azure-blob", "~> 0.5"
+gem "azure-blob", "~> 0.5", require: false
 ```
 
 ### Google Cloud Storage Service

@@ -141,14 +141,8 @@ GEM
       aws-sigv4 (~> 1.5)
     aws-sigv4 (1.11.0)
       aws-eventstream (~> 1, >= 1.0.2)
-    azure-storage-blob (2.0.3)
-      azure-storage-common (~> 2.0)
-      nokogiri (~> 1, >= 1.10.8)
-    azure-storage-common (2.0.4)
-      faraday (~> 1.0)
-      faraday_middleware (~> 1.0, >= 1.0.0.rc1)
-      net-http-persistent (~> 4.0)
-      nokogiri (~> 1, >= 1.10.8)
+    azure-blob (0.5.7.1)
+      rexml
     backburner (1.6.1)
       beaneater (~> 1.0)
       concurrent-ruby (~> 1.0, >= 1.0.1)
@@ -235,8 +229,6 @@ GEM
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
     faraday-retry (1.0.3)
-    faraday_middleware (1.2.1)
-      faraday (~> 1.0)
     ffi (1.17.1)
     ffi (1.17.1-aarch64-linux-gnu)
     ffi (1.17.1-aarch64-linux-musl)
@@ -395,8 +387,6 @@ GEM
       ruby2_keywords (~> 0.0.1)
     mutex_m (0.3.0)
     mysql2 (0.5.6)
-    net-http-persistent (4.0.5)
-      connection_pool (~> 2.2)
     net-imap (0.5.5)
       date
       net-protocol
@@ -736,7 +726,7 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk-s3
   aws-sdk-sns
-  azure-storage-blob (~> 2.0)
+  azure-blob (~> 0.5)
   backburner
   bcrypt (~> 3.1.11)
   bootsnap (>= 1.4.4)
