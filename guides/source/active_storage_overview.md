@@ -137,7 +137,7 @@ google:
   bucket: your_own_bucket-<%= Rails.env %>
 
 azure:
-  service: AzureStorage
+  service: AzureBlob
   # ...
   container: your_container_name-<%= Rails.env %>
 ```
@@ -222,16 +222,16 @@ Declare an Azure Storage service in `config/storage.yml`:
 ```yaml
 # Use bin/rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 azure:
-  service: AzureStorage
+  service: AzureBlob
   storage_account_name: your_account_name
   storage_access_key: <%= Rails.application.credentials.dig(:azure_storage, :storage_access_key) %>
   container: your_container_name-<%= Rails.env %>
 ```
 
-Add the [`azure-storage-blob`](https://github.com/Azure/azure-storage-ruby) gem to your `Gemfile`:
+Add the [`azure-blob`](https://github.com/testdouble/azure-blob) gem to your `Gemfile`:
 
 ```ruby
-gem "azure-storage-blob", "~> 2.0", require: false
+gem "azure-blob", "~> 0.5"
 ```
 
 ### Google Cloud Storage Service
